@@ -1,0 +1,592 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: black;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.home-inputWrapper{
+  text-align: center;
+  margin-top: 2%;
+}
+.home-input{
+  padding: 1.5em;
+  border-radius: 20px;
+  background-color: lightgray;
+  border: 1px gray;
+  color: black;
+}
+
+.profile-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow:  0 1px 6px rgba(0, 0, 0, 0.87);
+    color: black;
+    padding: 1em;
+    margin: 2em;
+    margin-left: 4em;
+    width: 90%;
+}
+
+.profile-card:hover{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.87);
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+.summary-btn{
+  background-color: rgb(111, 111, 111);
+  padding: 1.5em;
+  border-radius: 25px;
+}
+
+.home-img{
+  width: 160px;
+  height: 170px;
+}
+
+.profile-img{
+  width: 250px;
+  height: 200px;
+  margin-right: 8%;
+}
+
+.profile-detail{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.87);
+  border-radius: 10px;
+  padding: 5%;
+}
+
+.profile-detail:hover{
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.87);
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+.profile-detail2{
+  margin-left: 5%;
+  margin-top: 6%;
+  
+}
+
+.profile-h1{
+  font-size: 300%;
+  margin-bottom: -3%;
+}
+/* .details-div1{
+  display: flex;
+  font-size: x-large;
+  
+}
+
+.details-div2{
+  display: flex;
+} */
+
+
+.admin-input{
+  height: 25px;
+  margin-left: 0.2%;
+}
+
+.admin-edit{
+  margin-right: 1%;
+  padding-top: 0.3%;
+  padding-bottom: 0.3%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.admin-delete{
+  padding: 0.3%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+/* Make profile card stack on smaller screens */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+
+  .summary-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  .profile-detail {
+    flex-direction: column;
+    margin: 5%;
+    padding: 3%;
+  }
+
+  .profile-detail2 {
+    margin-left: 0;
+    margin-top: 2em;
+  }
+
+  .profile-img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+
+  .profile-h1 {
+    font-size: 200%;
+    text-align: center;
+  }
+
+  .home-input {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .home-input {
+    padding: 1em;
+    font-size: 0.9rem;
+  }
+
+  .summary-btn {
+    padding: 1em;
+    font-size: 0.9rem;
+  }
+
+  .profile-card {
+    padding: 1em;
+  }
+
+  .profile-detail {
+    margin: 3%;
+    padding: 2%;
+  }
+}
+/* Large screens (2560px and up) */
+@media (min-width: 2560px) {
+  .profile-card {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3rem;
+    padding: 2em;
+  }
+
+  .home-img {
+    width: 200px;
+    height: 220px;
+  }
+
+  .summary-btn {
+    padding: 2em;
+    font-size: 1.1rem;
+  }
+
+  .home-input {
+    width: 50%;
+    font-size: 1.2rem;
+  }
+
+  .profile-detail {
+    padding: 4%;
+    font-size: 1.3rem;
+  }
+
+  .profile-img {
+    width: 300px;
+    height: auto;
+  }
+
+  .profile-h1 {
+    font-size: 350%;
+  }
+}
+
+
+/* ProfileDetail */
+
+/* Medium screens (up to 1024px) */
+@media (max-width: 1024px) {
+  .profile-detail {
+    flex-direction: column;
+    align-items: center;
+    padding: 4%;
+    margin: 5%;
+  }
+
+  .profile-img {
+    width: 80%;
+    height: auto;
+    margin: 0 0 1em 0;
+  }
+
+  .profile-detail2 {
+    margin: 0;
+    margin-top: 1.5em;
+    text-align: center;
+  }
+
+  .profile-h1 {
+    font-size: 250%;
+    margin-bottom: 0.5em;
+  }
+
+  .home-input {
+    width: 80%;
+  }
+
+  .summary-btn {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .profile-detail2 p {
+    margin: 0.5em 0;
+  }
+}
+
+/* Small screens (up to 768px) already handled above but reinforce layout */
+@media (max-width: 768px) {
+  .profile-detail {
+    flex-direction: column;
+    padding: 3%;
+  }
+
+  .profile-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile-detail2 {
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .profile-detail {
+    padding: 2%;
+    display: grid;
+  }
+
+  .profile-img {
+    width: 100%;
+  }
+
+  .profile-detail2 {
+    padding: 0 1em;
+  }
+
+  .profile-h1 {
+    font-size: 180%;
+  }
+}
+
+/* Extra large screens (2560px and up) */
+@media (min-width: 2560px) {
+  .profile-detail {
+    padding: 5%;
+    max-width: 60%;
+    margin: 3% auto;
+    font-size: 1.3rem;
+  }
+
+  .profile-img {
+    width: 350px;
+    height: auto;
+  }
+
+  .profile-detail2 {
+    margin-top: 3%;
+  }
+
+  .profile-h1 {
+    font-size: 350%;
+  }
+
+  .profile-detail2 p {
+    font-size: 1.2rem;
+  }
+}
+/* ProfileForm.css */
+
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.admin-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.admin-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  background-color: #fff;
+}
+
+textarea.admin-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .contact-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-form button[type='submit'] {
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-form button[type='submit']:hover {
+  background-color: #4338ca;
+}
+
+
+/* AdminPanel Component */
+
+.adminProfile-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  padding: 1.5em;
+  margin: 2em auto;
+  max-width: 90%;
+  background-color: #f9f9f9;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+/* Admin buttons */
+.admin-edit,
+.admin-delete {
+  padding: 0.5em 1em;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.admin-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Medium screens (up to 1024px) */
+@media (max-width: 1024px) {
+  .adminProfile-card {
+    padding: 1.2em;
+    font-size: 1rem;
+  }
+
+  .adminProfile-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .admin-edit,
+  .admin-delete {
+    padding: 0.5em;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small screens (up to 768px) */
+@media (max-width: 768px) {
+  .adminProfile-card {
+    font-size: 0.95rem;
+    padding: 1em;
+    gap: 0.6em;
+  }
+
+  .adminProfile-card img {
+    width: 80px;
+    height: 80px;
+    align-self: center;
+  }
+
+  .admin-edit,
+  .admin-delete {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Extra small screens (up to 480px) */
+@media (max-width: 480px) {
+  .adminProfile-card {
+    font-size: 0.9rem;
+    padding: 0.8em;
+  }
+
+  .adminProfile-card h4 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .adminProfile-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+
+  .admin-edit,
+  .admin-delete {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra large screens (2560px and up) */
+@media (min-width: 2560px) {
+  .adminProfile-card {
+    max-width: 50%;
+    font-size: 1.3rem;
+    padding: 2.5em;
+  }
+
+  .adminProfile-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .admin-edit,
+  .admin-delete {
+    font-size: 1.1rem;
+    padding: 1em 1.5em;
+  }
+}
+
+/* Navbar Component */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #20232a;
+  padding: 1rem 2rem;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-links li.active a {
+  border-bottom: 2px solid white;
+}
+
+/* Responsive - Stack nav on small screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
